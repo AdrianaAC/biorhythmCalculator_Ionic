@@ -1,4 +1,5 @@
 import { IonCard, IonCardContent, IonCardHeader, IonCardTitle } from "@ionic/react";
+import "./BiorhythmCard.css";
 import React from "react";
 import "../App.css";
 import dayjs from "dayjs"; 
@@ -20,9 +21,9 @@ function BiorhythmCard({birthDate, targetDate}) {
          </IonCardHeader>
          <IonCardContent>
            <BiorhythmChart birthDate={birthDate} targetDate={targetDate}/>
-          <p>Physical: {physical.toFixed(3)}%</p>
-          <p>Emotional: {emotional.toFixed(3)}%</p>
-          <p>Intellectual: {intellectual.toFixed(3)}%</p>
+          <p className="physical">Physical: {physical.toFixed(3)}%</p>
+          <p className="emotional">Emotional: {emotional.toFixed(3)}%</p>
+          <p className="intellectual">Intellectual: {intellectual.toFixed(3)}%</p>
          </IonCardContent>
        </IonCard>
         </div>
